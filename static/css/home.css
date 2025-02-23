@@ -34,7 +34,7 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: linear-gradient(to bottom right, #ff4e50, #f9d423); /* Dark background */
+    background-color: #6088c4; /* Dark background */
     color: white;
 }
 
