@@ -1,227 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darpan YB| Portfolio</title>
-    <link rel="stylesheet" href="static/css/home.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Darpan Y B | Full Stack Developer</title>
+  <link rel="stylesheet" href="./static/style.css" />
 </head>
 <body>
-    <nav class="sticky-nav">
-        <!--<ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>-->
-            <a href="static/Resume Darpan YB.pdf" class="resume-btn" download>Download Resume</a>
-            <a class="resume-btn" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=darpan-y-b-880b6a255" target="_blank">Follow on LinkedIn</a>
-        </ul>
-    </nav>
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Welcome to My Portfolio</h1>
-            <p>I'm Darpan YB, a Full-Stack Developer. Check out my work below.</p>
-            <a href="#projects" class="btn">View My Work</a>
-            <!-- Skills Section Inside Hero -->
-        <div class="skills-container">
-            <h4>My Skills</h4>
-            <div class="skills">
-                <div class="skill-icon" data-name="Python"><img src="static/icons/python.svg" alt="Python"></div>
-                <div class="skill-icon" data-name="Django"><img src="static/icons/django.svg" alt="Django"></div>
-                <div class="skill-icon" data-name="Flask"><img src="static/icons/flask.svg" alt="Flask"></div>
-                <div class="skill-icon" data-name="html-5"><img src="static/icons/html-5.svg" alt="HTML"></div>
-                <div class="skill-icon" data-name="css-3"><img src="static/icons/css-3.svg" alt="CSS"></div>
-                <div class="skill-icon" data-name="JavaScript"><img src="static/icons/js.svg" alt="JavaScript"></div>
-                <div class="skill-icon" data-name="linux"><img src="static/icons/linux.svg" alt="Python"></div>
-                <div class="skill-icon" data-name="bootstrap"><img src="static/icons/bootstrap.svg" alt="Python"></div>
-                <div class="skill-icon" data-name="Artificial Intelligance"><img src="static/icons/ai.svg" alt="Python"></div>
-                <div class="skill-icon" data-name="Figma"><img src="static/icons/figma.svg" alt="Python"></div>
-                <div class="skill-icon" data-name="github"><img src="static/icons/github.svg" alt="Python"></div>
-            </div>
+
+  <!-- Banner/Header -->
+  <header class="banner">
+    <div class="glass-card profile-container">
+      <img src="./static/My Photo.jpg" alt="Profile" class="profile-pic" />
+      <div class="text-section">
+        <h1>Darpan Y B 🏅</h1>
+        <p>Full Stack Web Developer | Pursuing BE CSE | Completed Diploma in CSE | Seeking Opportunities to Grow & Innovate in Web Development 🚀</p>
+        <p class="location">📍 Bengaluru, Karnataka, India • <a href="#contact">Contact info</a></p>
+        <div class="buttons">
+          <a href="https://www.linkedin.com/in/darpan-y-b-880b6a255/" class="btn blue">LinkedIn</a>
+          <a href="#featured" class="btn white">Projects</a>
+          <a href="./static/Darpan YB.pdf" class="btn white">My Resume</a>
+          <a href="#skills" class="btn white">Skills</a>
         </div>
-    </section>
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Results-driven Software Developer with expertise in Full-Stack Web Development, Software Engineering, and Machine Learning. Proficient in Python, Flask, Django, JavaScript, React.js, and SQL. Passionate about building scalable applications, designing RESTful APIs, and implementing machine learning models. A fast learner with strong problem-solving skills, seeking opportunities to contribute to cutting-edge projects and grow as a developer.</p>
-    </section>
-    <section id="projects" class="projects">
-        <h2>Top Projects</h2>
-        <div class="project-container">
-            <div class="project-card">
-                <div class="card-front">
-                    <h3>Music Player</h3><br>
-                </div>
-                <div class="card-back">
-                    <p>This is a simple yet functional Music System Web Application built using Python, Flask, HTML, and CSS. The application allows users to manage a playlist by adding songs, playing them, and removing them. The focus is on delivering an intuitive user interface along with basic music management functionalities.</p>
-                    <a href="https://github.com/DarpanYB38/Music-Player" class="btn">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="card-front">
-                    <h3>Weather-Forecast-Web-Application</h3><br>
-                </div>
-                <div class="card-back">
-                    <p>A weather forecast web application built with Flask and OpenWeatherMap API. This application allows users to input a city name and retrieve real-time weather data, including temperature, description, humidity, wind speed, sunrise, sunset, and the current local time.</p>
-                    <a href="https://github.com/DarpanYB38/Weather-Forecast-Web-Application" class="btn">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="card-front">
-                    <h3>Rest-API-With-Flask
-                        Flask CRUD Application</h3><br>
-                </div>
-                <div class="card-back">
-                    <p>This project is a simple web application built with Flask that allows users to manage a list of items. The application supports basic CRUD (Create, Read, Update, Delete) operations and uses SQLite as the database. SQLAlchemy is used for ORM (Object-Relational Mapping).</p>
-                    <a href="https://github.com/DarpanYB38/Rest-API-With-Flask" class="btn">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="card-front">
-                    <h3>Data Visualization Dashboard</h3><br>
-                </div>
-                <div class="card-back">
-                    <p>This project is a Data Visualization Dashboard built using Flask. It allows users to view and analyze sales, expenses, and profit data through interactive charts. The dashboard is dynamically generated based on the selected month, and users can also export the data to a CSV file.</p>
-                    <a href="https://github.com/DarpanYB38/Data-Visualization-Dashboard" class="btn">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="card-front">
-                    <h3>Iris Prediction System</h3><br>
-                </div>
-                <div class="card-back">
-                    <p>This is a simple single-page machine learning prediction system built using Python Django. It predicts the species of Iris flowers based on input features such as sepal length, sepal width, petal length, and petal width.</p>
-                    <a href="https://github.com/DarpanYB38/AIMLFlower-Species-Prediction-model" class="btn">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="card-front">
-                    <h3>Exam Marks Prediction</h3><br>
-                </div>
-                <div class="card-back">
-                    <p>This is a simple single-page machine learning prediction system built using Python Flask. It predicts exam marks based on certain input features such as study hours, attendance, etc.</p>
-                    <a href="https://github.com/DarpanYB38/Exam-Marks-Predictor-ML" class="btn">View Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="experience" class="experience">
-        <!--Prodigy Infotech Internship-->
-        <h2>Experience</h2>
-        <div class="experience-card" onclick="openModal('experience3')">
-            <h3><b>Full-Stack Developer Intern</b>| Prodigy infotech | Bengaluru | Oct 2024 - Nov 2024</h3>
-            <p>Developed dynamic web applications using ReactJS, JavaScript, Flask, HTML, and CSS. Designed and optimized interactive user interfaces with modular code, improving frontend performance and strengthening UI/UX problem-solving skills.</p>
-        </div>
-        <div class="modal" id="experience3">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('experience3')">&times;</span>
-                <h2>Internship Details</h2>
-                <p>●​ Built dynamic web applications using ReactJS, JavaScript, Flask, HTML, and CSS.</p>
-                <p>●​ Designed and optimized interactive user interfaces with structured modular code.</p>
-                <p>●​ Improved frontend performance by implementing best practices.</p>
-                <p>●​ Strengthened problem-solving skills in UI/UX development.</p>
-                <!--<video controls>
-                    <source src="internship1.mp4" type="video/mp4">
-                </video>-->
-            </div>
-        </div>
-        <!--Karunadu Internship-->
-        <div class="experience-card" onclick="openModal('experience2')">
-            <h3><b>Machine Learning Intern</b>| Karunadu technologies Pvt Ltd | Bengaluru | Oct 2023 - Nov 2023</h3>
-            <p>Developed AI models for fruit recognition using image processing and patient treatment prediction using medical data. Gained hands-on experience with data preprocessing, model training, and evaluation, while improving collaboration and communication skills.</p>
-        </div>
-        <div class="modal" id="experience2">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('experience2')">&times;</span>
-                <h2>Internship Details</h2>
-                <p>●​ Developed an AI model for fruit recognition using image processing techniques.</p>
-                <p>●​ Built an ML model to predict patient treatments using medical data.</p>
-                <p>●​ Gained hands-on experience with data preprocessing, model training, and evaluation.</p>
-                <p>●​ Improved collaboration and communication skills within a development team.</p>
-            </div>
-        </div>
-        <!--Skill Disk Internship-->
-        <div class="experience-card" onclick="openModal('experience1')">
-            <h3><b>Web Development Inter</b>| Skill Disk | Bengaluru| Nov 2022 - Dec 2022</h3>
-            <p>Developed 'Drop Docs,' a web application using Django, HTML, CSS, and JavaScript, enabling cloud file uploads and cross-device access.  Strengthened backend and API integration skills.</p>
-        </div>
-        <div class="modal" id="experience1">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('experience1')">&times;</span>
-                <h2>Internship Details</h2>
-                <p>●​ Build a <b class="required">'Drop Docs' web app</b> using <b>Django, HTML,CSS and Js.</b></p>
-                <p>●​ Enabled <b>cloud file uploads and cross-device acess.</b></p>
-                <p>●​ Strengthened <b>backend and API Intefration Skills</b>.</p>
-            </div>
-        </div>
+      </div>
+    </div>
+  </header>
+<section id="skills" class="skills-container">
+  <div class="skills">
+    <div class="skill-icon" data-name="Python"><img src="static/icons/python.svg" alt="Python"></div>
+    <div class="skill-icon" data-name="Django"><img src="static/icons/django.svg" alt="Django"></div>
+    <div class="skill-icon" data-name="Flask"><img src="static/icons/flask.svg" alt="Flask"></div>
+    <div class="skill-icon" data-name="HTML"><img src="static/icons/html-5.svg" alt="HTML"></div>
+    <div class="skill-icon" data-name="CSS"><img src="static/icons/css-3.svg" alt="CSS"></div>
+    <div class="skill-icon" data-name="JavaScript"><img src="static/icons/js.svg" alt="JavaScript"></div>
+    <div class="skill-icon" data-name="Linux"><img src="static/icons/linux.svg" alt="Linux"></div>
+    <div class="skill-icon" data-name="Bootstrap"><img src="static/icons/bootstrap.svg" alt="Bootstrap"></div>
+    <div class="skill-icon" data-name="AI"><img src="static/icons/ai.svg" alt="AI"></div>
+    <div class="skill-icon" data-name="Figma"><img src="static/icons/figma.svg" alt="Figma"></div>
+    <div class="skill-icon" data-name="GitHub"><img src="static/icons/github.svg" alt="GitHub"></div>
+  </div>
+</section>
+<!-- About Section -->
+<section class="about-container">
+  <div class="glass-card about-box">
+    <h3>About</h3>
+
+    <div class="about-block">
+      <p>
+        Hi! I'm a dedicated Full Stack Web Developer currently in my final year of CSE Engineering.
+        I hold a diploma in Computer Science and Engineering and love building web apps and learning new tech.
+      </p>
+    </div>
+
+    <div class="about-block">
+      <strong>Highlights:</strong>
+      <ul>
+        <li>Full Stack: HTML, CSS, JavaScript, Django, Flask, Python</li>
+        <li>Projects: Full web app lifecycle from design to deployment</li>
+        <li>Collaboration: Experience working in team environments</li>
+        <li>Lifelong Learner: Continuously exploring best practices</li>
+      </ul>
+    </div>
+
+    <div class="about-block">
+      <strong>What I'm Looking For:</strong>
+      <p>
+        I'm actively looking for opportunities to grow, contribute, and innovate in web development.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURED Projects -->
+<section id="featured" class="featured-container">
+  <h3 class="featured-title">Featured</h3>
+  <div class="projects-scroller" id="autoScroll">
+    <div class="project-card">
+      <img src="./static/icons/project1.png" alt="Project 1"/>
+      <p><strong>Hey Everyone!</strong><br>🚀  Task-1 of my CodSoft internship—built a dynamic, responsive Personal Portfolio Website to showcase my skills and enhance user interaction! 🌟</p>
+    </div>
+    <div class="project-card">
+      <img src="./static/icons/Project2.png" alt="Project 2" />
+      <p><strong>Exciting Project Alert!</strong><br>🌩️ Weather Forecast Web App using Flask, OpenWeatherMap API, HTML & CSS—real-time weather, city time, and fun emojis included! </p>
+    </div>
+    <div class="project-card">
+      <img src="./static/icons/ai.svg" alt="Project 3" />
+      <p><strong>Mini Portfolio!</strong><br>💼 Built with HTML & Glass Effect</p>
+    </div>
+    <!-- Add more cards as needed -->
+  </div>
+</section>
 
 
-    </section>
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
+<!-- EXPERIENCE Timeline -->
+<section class="timeline-container">
+  <h3 class="timeline-title">Experience</h3>
+  <div class="timeline">
 
-        <p>Email: darpanbrahma@gmail.com</p>
-        <p>Phone No: 8050725614</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/darpan-y-b-880b6a255/">LinkedIn Profile</a></p>
-        <p>Github: <a href="https://github.com/DarpanYB38">Github Profile</a></p>
-    </section>
-    <button id="scrollToTop" onclick="scrollToTop()">&#8679;</button>
+    <!--Ecperience 1-->
+    <div class="timeline-item">
+      <div class="timeline-icon">💼</div>
+      <div class="timeline-content glass-card">
+        <h4>App Developer Mobile & Web</h4>
+        <p><strong>Rooman Technologies</strong> · Full-time</p>
+        <span class="timeline-date">Jun 2024 – Apr 2025 · On-site · 11 months</span>
+        <p>
+          Gained hands-on experience with modern technologies by building a full-stack e-commerce website using React.js and Node.js.</p>
+      </div>
+    </div>
+
+    <!-- Experience 2 -->
+    <div class="timeline-item">
+      <div class="timeline-icon">💼</div>
+      <div class="timeline-content glass-card">
+        <h4>Front-end Developer</h4>
+        <p><strong>Logic Launch Technologies</strong> · Full-time</p>
+        <span class="timeline-date">Dec 2024 – Feb 2025 · Remote · 3 months</span>
+        <p>
+          Developed high-quality, responsive websites using HTML, CSS, JavaScript.
+        </p>
+      </div>
+    </div>
+
+    <!-- Experience 3 -->
+    <div class="timeline-item">
+      <div class="timeline-icon">💼</div>
+      <div class="timeline-content glass-card">
+        <h4>Full Stack Developer Intern</h4>
+        <p><strong>Prodigy InfoTech</strong> · Internship</p>
+        <span class="timeline-date">Oct 2024 – Nov 2024 · Remote · 2 months</span>
+        <p>
+          Built web apps using Flask, HTML, CSS, and JavaScript. Projects included stopwatch, Tic-Tac-Toe, and portfolio.
+        </p>
+      </div>
+    </div>
+
+    <!-- Experience 4 -->
+    <div class="timeline-item">
+      <div class="timeline-icon">💼</div>
+      <div class="timeline-content glass-card">
+        <h4>AIML Intern</h4>
+        <p><strong>Karunadu Technologies</strong> · Internship</p>
+        <span class="timeline-date">Oct 2023 – Nov 2023 · On-site · 2 months</span>
+        <p>
+          Worked on AI/ML models with Python, involving data preprocessing, training, and deployment pipelines.
+        </p>
+      </div>
+    </div>
+        <!-- Experience 5 -->
+    <div class="timeline-item">
+      <div class="timeline-icon">💼</div>
+      <div class="timeline-content glass-card">
+        <h4>Python Developer Intern</h4>
+        <p><strong>Skill Disk</strong> · Internship</p>
+        <span class="timeline-date">Oct 2022 – Nov 2022 · On-site · 2 months</span>
+        <p>
+          Worked as a Python developed web applications using Python frameworks such as Django and Flask.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- EDUCATION Timeline -->
+<section class="timeline-container">
+  <h3 class="timeline-title">Education</h3>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon">🎓</div>
+      <div class="timeline-content glass-card">
+        <h4>BE in Computer Science & Engineering</h4>
+        <p>HKBK College of Engineering, Bengaluru</p>
+        <span class="timeline-date">Jun 2022 - Jun 2025</span>
+        <p>CGPA 6.93</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">🎓</div>
+      <div class="timeline-content glass-card">
+        <h4>Diploma in Computer Science & Engineering</h4>
+        <p>Government Polytechnic, Bengaluru</p>
+        <span class="timeline-date">Apr 2019 - Apr 2022</span>
+        <p>Percentage 57%</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="achievements-container">
+  <h3 class="section-title"> Achievements & Certifications</h3>
+  <div class="achievements-grid">
+
+    <div class="achievement glass-card">
+      <h4>Python Certificate</h4>
+      <p>Completed Python for Everybody by University of Michigan on Coursera.</p>
+    </div>
+
+    <div class="achievement glass-card">
+      <h4>Ethical Hacking 101: Beginner's Guide</h4>
+      <p>Successfully completed a certified course in Ethical Hacking, gaining hands-on knowledge of cybersecurity principles and penetration testing techniques.</p>
+    </div>
+
+    <div class="achievement glass-card">
+      <h4>Inroduction to Bigdata and Hadoop</h4>
+      <p>Successfully completed a certified course on Introduction to Big Data and Hadoop, gaining foundational knowledge of big data concepts and the Hadoop ecosystem.</p>
+    </div>
+
+    <div class="achievement glass-card">
+      <h4>NoSQL Database</h4>
+      <p>Successfully completed a certified course on NoSQL Databases, acquiring knowledge of non-relational database models and their applications in handling large-scale data.</p>
+    </div>
+    <div class="achievement glass-card">
+      <h4>Introduction to Blockchain</h4>
+      <p>Successfully completed a certified course on Introduction to Blockchain, gaining foundational understanding of decentralized systems, blockchain architecture, and its real-world applications.</p>
+    </div>
+        <div class="achievement glass-card">
+      <h4>Exploring Transaction Methdology using Blockchain</h4>
+      <p>Successfully completed a certified course on Exploring Transaction Methodology using Blockchain, gaining insights into secure transaction processes and blockchain-based financial systems.</p>
+    </div>    
+  </div>
+</section>
+<section id="contact" class="contact-container">
+  <h3 class="section-title">Contact Me</h3>
+  <form action="https://formspree.io/f/xqabdpzd" method="POST" class="glass-card contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <p>Built with ❤️ by Darpan Y B</p>
+  <div class="footer-icons">
+    <a href="https://github.com/DarpanYB38" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/darpan-y-b-880b6a255/" target="_blank">LinkedIn</a>
+    <a href="mailto:darpanbrahma@gmail.com">Email</a>
+  </div>
+</footer>
 
 
+<script>
+  const scroller = document.getElementById("autoScroll");
 
+  let scrollAmount = 0;
+  const scrollStep = 320; // matches the card width + gap
+  const delay = 3000;
 
-    <script src="script.js"></script>
-    <script>
-        // Smooth scrolling for navigation links
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        document.getElementById(targetId).scrollIntoView({
-            behavior: 'smooth'
-        });
+  setInterval(() => {
+    if (scrollAmount >= scroller.scrollWidth - scroller.clientWidth) {
+      scrollAmount = 0; // reset scroll
+    } else {
+      scrollAmount += scrollStep;
+    }
+    scroller.scrollTo({
+      left: scrollAmount,
+      behavior: "smooth"
     });
-});
+  }, delay);
+</script>
 
-// Open modal function
-function openModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'flex';
-    setTimeout(() => {
-        modal.classList.add('show');
-    }, 10); 
-}
-
-// Close modal function
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.classList.remove('show');
-    setTimeout(() => {
-        modal.style.display = 'none';
-    }, 300);
-}
-
-// Close modal when clicking outside
-window.onclick = function(event) {
-    document.querySelectorAll('.modal').forEach(modal => {
-        if (event.target === modal) {
-            closeModal(modal.id);
-        }
-    });
-};
-
-// Skill bars animation
-window.addEventListener('scroll', function() {
-    const skills = document.querySelectorAll('.skill-bar');
-    skills.forEach(skill => {
-        const position = skill.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (position < windowHeight - 50) {
-            skill.style.width = skill.getAttribute('data-percent') + '%';
-        }
-    });
-});
-    </script>
 </body>
 </html>
