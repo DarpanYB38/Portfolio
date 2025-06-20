@@ -1,0 +1,754 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://img.freepik.com/premium-vector/glass-transparent-ui-interface-window-design-element-graphic-illustration-blue-purple_101884-2826.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+a {
+  color: #77eaff;
+  text-decoration: none;
+}
+
+/* Banner */
+.banner {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glass Effect Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  gap: 25px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+}
+
+/* Text Info */
+.text-section h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.badge {
+  font-size: 1rem;
+  background: #0a66c2;
+  padding: 2px 6px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.text-section p {
+  margin: 10px 0;
+  color: #e0e0e0;
+}
+
+.location {
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+/*.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.btn.blue {
+  background-color: #0a66c2;
+  color: white;
+}
+
+.btn.white {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ccc;
+  color: white;
+}*/
+/* Base Button Style */
+.btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: white;
+  transition: color 0.3s ease;
+  background-color: transparent;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover Fill Effect Layer */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  transition: transform 0.4s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 20px;
+}
+
+/* Common Hover Effect */
+.btn:hover::before {
+  transform: scaleX(1);
+}
+
+/* Blue Button */
+.btn.blue::before {
+  background: linear-gradient(90deg, #0a66c2, #0d8bff);
+}
+
+.btn.blue:hover {
+  color: #eaecf3;
+}
+
+/* White Button (Glass glow effect) */
+.btn.white::before {
+  background:linear-gradient(90deg, #e4d55291, #2072bea1);
+}
+
+.btn.white:hover {
+  color: #fff;
+}
+
+/* You can add more button variants */
+.btn.green::before {
+  background: linear-gradient(90deg, #1abc9c, #16a085);
+}
+
+.btn.purple::before {
+  background: linear-gradient(90deg, #9b59b6, #8e44ad);
+}
+
+/* Skills Section */
+.skills-container {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Skill Icon Circles */
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+  cursor: pointer;
+}
+
+.skill-icon img {
+  width: 40px;
+  height: 40px;
+  opacity: 0.85;
+}
+
+/* Hover Label and Glow */
+.skill-icon::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  color: #fff;
+  transform: scale(0);
+  transition: 0.2s ease;
+  margin-bottom: 5px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.skill-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px var(--glow-color, #00ffff);
+}
+
+.skill-icon:hover::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Unique Glow Colors */
+.skill-icon[data-name="Python"]:hover       { --glow-color: #3776AB; }
+.skill-icon[data-name="Django"]:hover       { --glow-color: #092e20; }
+.skill-icon[data-name="Flask"]:hover        { --glow-color: #ffffff; }
+.skill-icon[data-name="HTML"]:hover         { --glow-color: #e34c26; }
+.skill-icon[data-name="CSS"]:hover          { --glow-color: #2965f1; }
+.skill-icon[data-name="JavaScript"]:hover   { --glow-color: #f0db4f; color: black; }
+.skill-icon[data-name="Linux"]:hover        { --glow-color: #ffffff; }
+.skill-icon[data-name="Bootstrap"]:hover    { --glow-color: #7952b3; }
+.skill-icon[data-name="AI"]:hover           { --glow-color: #00ffea; }
+.skill-icon[data-name="Figma"]:hover        { --glow-color: #a259ff; }
+.skill-icon[data-name="GitHub"]:hover       { --glow-color: #ffffff; }
+
+/* --- ABOUT Section --- */
+.about-container {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+.about-box {
+  max-width: 800px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column; /* ✅ This ensures vertical stacking */
+  gap: 20px; /* Adds space between each block */
+}
+.about-block {
+  display: block; /* Force full width for each block */
+}
+.about-box ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.about-block p,
+.about-block li {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+/* --- FEATURED Floating Title --- */
+.featured-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.featured-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.projects-scroller {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.projects-scroller::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.project-card {
+  min-width: 300px;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  padding: 15px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  color: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.03);
+}
+.project-card img {
+  width: 100% !important;
+  height: 140px !important; /* or 120px for tighter layout */
+  object-fit: cover !important;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.projects-scroller {
+  scroll-snap-type: x mandatory;
+}
+
+.project-card {
+  scroll-snap-align: start;
+}
+#featured {
+  scroll-margin-top: 80px;   /* height of your fixed header */
+}
+
+/* --- TIMELINE --- */
+.timeline-container {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 25px;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -22px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+}
+
+.timeline-content {
+  padding: 15px 20px;
+  margin-left: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.timeline-content h4 {
+  margin: 0 0 5px;
+  color: #ffffff;
+}
+
+.timeline-content p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Certificate Preview Inside Timeline */
+.exp-cert {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-cert img {
+  width: 80px;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.exp-cert span {
+  color: #eee;
+  font-size: 0.85rem;
+}
+.projects-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.github-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  color: white;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.project-card a {
+  color: #00ccff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  margin: 10px 0;
+  color: #ddd;
+}
+
+.language {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.achievements-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.achievement {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  color: white;
+}
+
+.achievement h4 {
+  margin: 0 0 10px;
+  color: #00ffff;
+}
+
+.achievement p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #00ccff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0099cc;
+}
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: #ccc;
+}
+
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+  color: #00ccff;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.footer-icons a:hover {
+  color: #fff;
+}
+/* Reduce padding and margin */
+body, .timeline-container, .contact-container, .achievements-container {
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+}
+.featured-projects {
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.feature-card {
+  display: inline-block;
+  scroll-snap-align: start;
+  width: 85vw;
+  margin-right: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  /* ✅ Glass Card (Top Banner Section) */
+  .glass-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .text-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .text-section p {
+    font-size: 0.9rem;
+  }
+
+  .badge {
+    font-size: 0.85rem;
+  }
+
+  /* ✅ Timeline Adjustments */
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-icon {
+    left: -20px;
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .timeline-content {
+    padding: 12px;
+    margin-left: 20px;
+  }
+
+  .timeline-content h4 {
+    font-size: 1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.85rem;
+  }
+
+  .timeline-date {
+    font-size: 0.75rem;
+  }
+
+  .exp-cert {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .exp-cert img {
+    width: 60px;
+  }
+
+  /* ✅ About Section */
+  .about-box {
+    padding: 20px;
+  }
+
+  .about-block p,
+  .about-block li {
+    font-size: 0.9rem;
+  }
+
+  /* ✅ Projects */
+  .projects-scroller {
+    gap: 12px;
+  }
+
+  .project-card {
+    min-width: 250vw;
+    padding: 12px;
+  }
+
+  .project-card img {
+    height: 160px;
+  }
+
+  /* ✅ Achievements */
+  .achievement {
+    padding: 15px;
+  }
+
+  .achievement p {
+    font-size: 0.85rem;
+  }
+
+  /* ✅ Footer */
+  .site-footer {
+    font-size: 0.85rem;
+  }
+
+  .footer-icons {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .btn {
+    width: 80%;
+    max-width: 250px;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: white;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    transition: color 0.3s ease;
+  }
+
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    transition: transform 0.4s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 25px;
+  }
+
+  .btn:hover::before {
+    transform: scaleX(1);
+  }
+
+  .btn.blue::before {
+    background: linear-gradient(90deg, #0a66c2, #0d8bff);
+  }
+
+  .btn.white::before {
+    background: linear-gradient(90deg, #e4d55291, #2072bea1);
+  }
+
+  .btn.blue:hover {
+    color: #eaf4ff;
+  }
+
+  .btn.white:hover {
+    color: #fff;
+  }
+}
